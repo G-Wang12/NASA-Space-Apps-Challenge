@@ -25,7 +25,7 @@ expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = thisDir + os.sep + 'data/%s_%s_%s' %(expInfo['participant'], expName, expInfo['date'])
+filename = thisDir + os.sep + 'data/%s_%s_%s' %(expInfo['participant number'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -89,7 +89,7 @@ def generate_trials(trial_type_column, multiplier):
 trial_rows = ""
 
 # set block order based on participant code
-participantNumber = int(expInfo['participant'])
+participantNumber = int(expInfo['participant number'])
 if (participantNumber % 2) == 1:
     block_order = 1
 elif (participantNumber % 2) == 0:
